@@ -109,6 +109,11 @@ docker run -d --name flaskapp -v mysql-data:/var/lib/mysql -v ./message.sql:/doc
 
 - If you encounter issues, check Docker logs and error messages for troubleshooting.
 
+
+## Demo
+
+![image](https://github.com/Atanub707/two-tier-flask-app/assets/103525450/b91f5cf4-c007-4e6a-9306-7239e4c71477)
+![image](https://github.com/Atanub707/two-tier-flask-app/assets/103525450/ee16d0fe-c11f-4d06-b103-01f53968a5d4)
+
 ```
-![Alt text](image.png)
-![Alt text](image-1.png)
+
