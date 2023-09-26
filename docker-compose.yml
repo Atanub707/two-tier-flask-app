@@ -1,6 +1,5 @@
 version: '3'
 services:
-  
   backend:
     build:
       context: .
@@ -13,7 +12,8 @@ services:
       MYSQL_DB: myDb
     depends_on:
       - mysql
-
+    volumes:
+      - ./:/app  # Mount your code directory into the container's /app directory
   mysql:
     image: mysql:5.7
     environment:
@@ -22,8 +22,8 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     volumes:
-      - ./message.sql:/docker-entrypoint-initdb.d/message.sql   # Mount sql script into container's /docker-entrypoint-initdb.d directory to get table automatically created
-      - mysql-data:/var/lib/mysql  # Mount the volume for MySQL data storage
+      - ./message.sql:/docker-entrypoint-initdb.d/message.sql
+      - mysql-data:/var/lib/mysql
 
 volumes:
   mysql-data:
